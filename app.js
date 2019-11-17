@@ -45,6 +45,10 @@ const trumpLocal= "approval_topline.csv";
             chartRender(data, 'approve', "#approval", w, h, 'approve_estimate', 'red');
             chartRender(data, 'disapprove', "#disapproval", w, h, 'disapprove_estimate', 'blue');
         });
-
-//todo: add in axis's
-//todo: add in news api > get nyt and fox news > filter for jumps in data (most popular for that week)
+/*
+todo: add in axis's
+todo: add in news api > get nyt and fox news > filter for jumps in data (most popular for that week)
+todo: allow for chart to resize
+todo: allow for different subgroups to be shown (make a lighter color)
+todo: hover 'circles' to get information (date, subgroup, rating, )
+*/
