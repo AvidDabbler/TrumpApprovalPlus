@@ -1,7 +1,7 @@
 const trumpURL=`https://projects.fivethirtyeight.com/trump-approval-data/approval_topline.csv`;
 const trumpLocal= "approval_topline.csv";
 
-    const w = 1300;
+    const w = (document.getElementById('container').clientWidth)*.9;
     const h = 450;
     
     // D3 STANDARD APPROVAL RENDERING
@@ -17,11 +17,12 @@ const trumpLocal= "approval_topline.csv";
             .append("circle")
             .attr("class", d => id + '_' + d.subgroup)
             .attr("id", d => id + '_' + d.modeldate)
-            .attr("cx", (d,i) => i + 10)
+            .attr("cx", (d,i) => {
+                return (i * (data.length / w));
+            })
             .attr("cy", (d) => {
                 const meas = eval( 'd.' + measure);
-                let val = ((100-meas) * (h/100));
-                return val;
+                return ((100-meas) * (h/100));
             })
             .attr("r", d => 2 )
             .style("fill", d => color)
@@ -40,7 +41,7 @@ const trumpLocal= "approval_topline.csv";
         .then(data =>{
             return data.sort((a, b) => a.modeldate - b.modeldate);
         }).then(data =>{
-            console.log(data)
+            console.log(1*(w/data.length))
             chartRender(data, 'approve', "#approval", w, h, 'approve_estimate', 'red');
             chartRender(data, 'disapprove', "#disapproval", w, h, 'disapprove_estimate', 'blue');
         });
