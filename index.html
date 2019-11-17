@@ -10,14 +10,22 @@
         <title>Trump Approval Rating</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+        <link rel="stylesheet" href="style.css">
+
     </head>
-    <body>
+    <body class="w-90">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-       <div id="chart"></div>
+        <h1 class="fs-normal sans-serif tc">Donald Trump Approval Ratings</h1>
+
+        <div id="container">
+            <div id="approval"></div>
+            <div id="disapproval"></div>
+        </div>
+            
         <script src="app.js" async defer></script>
     </body>
 </html>

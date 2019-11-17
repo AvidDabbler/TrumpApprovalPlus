@@ -1,5 +1,27 @@
-#chart{
-    display: flex;
-    margin: auto; 
-    width: 90%;
+body, html{
+    margin: auto
+}
+
+#container{
+    display: block;
+    margin: 0;
+    padding:0;
+    align-content: center;
+}
+#approval{
+    width: 100%;
+    display: absolute;
+    padding: 0;
+    margin: 0;
+
+}
+#disapproval{
+    width: 100%;
+    display: absolute;
+    padding: 0;
+    margin: 0;
+    margin-top: -450px;
+}
+.disapprove_voters{
+    margin-top: -450px;
 }
